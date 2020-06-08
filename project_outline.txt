@@ -1,0 +1,69 @@
+MIS106 Database Systems 
+Project Part 1
+Student Number:	217MI1183
+Student Name:	BAŞAR BALLIOZ
+Project Name:	DATABASE ANALYSIS OF ‘www.cinemaximum.com.tr’ WEBSITE
+
+
+Step 1 
+
+Provide detailed information for the requirements specification and analysis about the database you will design as your project. Your description should include answers to the following questions:
+1. What is the name and short description of your project?
+
+The full name of this project is “Database System Analysis Of ‘www.cinemaximum.com.tr’ website. Cinemaximum is an online ticket sales site where you can find recent movies in the vision. Like every online ticket sales site, Cinemaximum also has an database and this project will be a simple analysis of the database of Cinemaximum’s website.
+
+
+
+
+
+2. What kind of information needs to be stored in terms of entities? Define and describe them.
+Cinemaximum website’s entities are:
+
+1-  Customer: Customer can create an account by registering with a phone number, password and an approved e-mail. After that registiration, customer can edit his profile page, post comment on movies, buy tickets, declare favorite cinemas, collect points from tickets and etc.
+2-  Tickets: Tickets allow you to enter a movie. Each ticket has unique ticket_id and a price. Also it has attributes like: Cinema name, movie name, ticket date, show time, movie format, type, PNR code, seats and hall number.
+3-  Movie: Each movie is played on cinemas. Every movie has specific information about such as it is director, actors, movie name, genre duration and etc. Also, this entity can be commented by users.
+4-  Cinemas: Cinemas are places that where the movies are played and each cinema has unique name and address.
+5-  Discount: Discount are coupons or special offers that used to decrease price of a ticket. Every coupon has unique id. Also, it can be used for bring free drink or pop-corn from cinema’s cafeteria. Discount entity has its own attiributes like coupon price, terms and coupon description.
+6-  Comment: Comment entity keeps the information of each comment which posted on movies. Every comment has date, unique id and text.
+
+
+
+
+
+3. What are the properties of each entity? 
+
+1-  Customer: Customer entity attributes are: customer_name, email(PK), password, phone_no(PK), customer_id(PK), customer_surname, birthdate, followings, customer_cinemas, past_transactions, customer_tickets, customer,points and special_offers.
+2-  Ticket: Ticket entity attributes are: cinema_name, movie_name, ticket_date, show_time, ticket_movie_format, show_time, ticket_type, pnr_code, seats, ticket_id(PK), ticket_price, hall_no. 
+3-  Movie: Movie entity attributes are: director, cast, movie_name(PK), genre, release_date, duration, language, movie_summary, movie_format, movie_trailer, movie_rate, movie_comments, age_restriction.
+4-  Cinema: Cinemas entity attributes are: cinema_name(PK) and cinema_adress.
+5-  Discount: Discount entity attributes are: coupon_price, coupon_terms, coupon_id(PK), coupon_description.
+6-  Comment: Comments entity attributes are: comment_id(PK), comment_text, owner_of_comment.
+
+PK: Primary Key
+
+
+
+
+
+4. What are the relationships between these entities?
+
+1- Book: Book relationship is between Customer and Tickets. This relation enable the user to book tickets from cinema.
+2- Post: Post relationship is between Customer and Comments. Comments that posted by users are enabled by this relationship.
+3- Sell: Sell relationship is between Tickets and Cinema. Cinema sells tickets to customers and this relationship is critical because, it is also enables customers to book tickets.
+4- Play: Play relationship is between Movie and Cinema. Every movie is played on cinemas. So, this relation makes movie able to play on cinemas.
+5- Offer: Offer relationship is between Tickets and Discount. Discount coupons offers discount to customer by this relation.
+6- Hold: Hold relationship between Movie and Comments and this relation allows to store comments on a movie.
+
+
+
+
+
+5. What are the properties of each relationship?
+
+1- Book: Book relationship’s attributes are:  book_date
+2- Post: Post relationship’s attributes are: post_date
+3- Sell: Sell relationship’s attributes are: None
+4- Play: Play relationship’s attributes are: play_date
+5- Offer: Offer relationship’s attributes are: None
+6- Hold: Hold relationship’s attributes are: None 
+

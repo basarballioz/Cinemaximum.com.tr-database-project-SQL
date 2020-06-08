@@ -1,0 +1,19 @@
+MIS106 Database Systems 
+Project Part 3
+Student Number:	217MI1183
+Student Name:	BAŞAR BALLIÖZ
+Project Name:	DATABASE ANALYSIS OF ‘www.cinemaximum.com.tr’ WEBSITE
+
+Step 3 
+Map the ER diagram you drew in Step 2 to the relational model (see Lecture 5: Mapping a Conceptual Design into a Logical Design).
+
+
+CUSTOMER(e_mail, customer_name, customer_surname, birthdate, followings, customer_tickets, customer_points, special_offers, pass_transactions, customer_cinemas, customer_id, phone_number, password)
+COMMENT(comment_id, owner_of_comment, comment_text)
+MOVIE(movie_name, director, cast, genre, release_date, duration, movie_summary, movie_format, language, movie_trailer, movie_rate, movie_comments, age_restriction)
+TICKET(ticket_id, hall_no, ticket_price, ticket_seats, pnr_code, ticket_type, ticket_date, cinema_name, movie_name, show_time, ticket_movie_format)
+DISCOUNT(coupon_id, coupon_terms, coupon_description, coupon_price)
+CINEMA(cinema_name, cinema_adress)
+POST(post_date, customer_id, comment_id)
+BOOK(book_date, customer_id, ticket_id)
+PLAY(play_date, movie_name, cinema_name)
